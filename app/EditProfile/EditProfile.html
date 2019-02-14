@@ -1,0 +1,17 @@
+<main>
+    <div class="container">
+        <form ng-submit="$ctrl.updateProfile($ctrl.profile)">
+            <button ng-click = "$ctrl.updateImg('cat')" type="button">Cat</button>
+            <button ng-click = "$ctrl.updateImg('dog')" type="button">Dog</button>
+            <button ng-click = "$ctrl.updateImg('fish')" type="button">Fish</button>
+            <button ng-click = "$ctrl.updateImg('hamster')" type="button">Hamster</button>
+            <p class="label">Name</p>
+            <input ng-model="$ctrl.profile.name" value="{{ $ctrl.profile.name }}" type="text">
+            <p class="label">Contact</p>
+            <input ng-model="$ctrl.profile.contact" value="{{ $ctrl.profile.contact }}" type="text">
+            <p class="label">Bio</p>
+            <input ng-model="$ctrl.profile.bio" value="{{ $ctrl.profile.bio }}" type="text">
+            <button>Update</button>
+        </form>
+    </div>
+</main>

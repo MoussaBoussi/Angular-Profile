@@ -1,0 +1,9 @@
+<main>
+    <div class="container">
+        <img id="profilePic" src="/app/Assets/{{ $ctrl.profile.img }}.png" alt="">
+        <h4 id="name">{{ $ctrl.profile.name }}</h4>
+        <p id="email">{{ $ctrl.profile.contact }}</p>
+        <p id="bio">{{ $ctrl.profile.bio }}</p>
+        <button ng-click="$ctrl.editProfile()">Edit</button>
+    </div>
+</main>
