@@ -2,7 +2,7 @@
 
 const profile = {
     templateUrl: "/app/Profile/Profile.html",
-    controller: ["$location", "ProfileService", function($location, ProfileService){
+    controller: ["ProfileService", function(ProfileService){
         const vm = this
         vm.$onInit = function () {
             vm.profile = ProfileService.getUserProfile()
