@@ -4,8 +4,7 @@ const editprofile = {
     templateUrl: "/app/EditProfile/EditProfile.html",
     controller: ["$location", "ProfileService", function($location, ProfileService){
         const vm = this
-
-
+        
         vm.$onInit = function () {
             vm.profile = ProfileService.getUserProfile()
         }

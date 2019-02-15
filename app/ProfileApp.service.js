@@ -4,19 +4,17 @@ function ProfileService ($location) {
     const self = this
     self.profile = {
         name: "Snoopy",
-        contact: "Snoopy@prettyalright.co",
-        bio: "I'm a good bowey",
+        contact: "dont@me.co",
+        bio: "I'm a good bowey.",
         img: "dog"
     }
     // setter
     self.setUserProfile = function (object) {
         // creating property bound to the object being passed from setProfile
         self.profile = object
-        console.log(self.profile)
     }
     // getter
     self.getUserProfile = function () {
-        console.log(self.profile)
         return self.profile
     }
     self.editProfile = function () {

@@ -6,7 +6,6 @@ const profile = {
         const vm = this
         vm.$onInit = function () {
             vm.profile = ProfileService.getUserProfile()
-            console.log(vm.profile)
         }
         vm.editProfile = function () {
             ProfileService.editProfile()
