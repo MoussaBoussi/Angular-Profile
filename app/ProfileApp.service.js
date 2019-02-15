@@ -6,7 +6,7 @@ function ProfileService ($location) {
         name: "Snoopy",
         contact: "Snoopy@prettyalright.co",
         bio: "I'm a good bowey",
-        // img: "dog"
+        img: "dog"
     }
     // setter
     self.setUserProfile = function (object) {
@@ -14,17 +14,17 @@ function ProfileService ($location) {
         self.profile = object
         console.log(self.profile)
     }
+    // getter
+    self.getUserProfile = function () {
+        console.log(self.profile)
+        return self.profile
+    }
     self.editProfile = function () {
         // after you set the profile return to profile page
         $location.path("/editprofile")
     }
     self.navToProfile = function() {
         $location.path("/profile")
-    }
-    // getter
-    self.getUserProfile = function () {
-        console.log(self.profile)
-        return self.profile
     }
     self.updatePic = function (newImg) {
         self.profile.img = newImg

@@ -1,17 +1,29 @@
 <main>
     <div class="container">
         <form ng-submit="$ctrl.updateProfile($ctrl.profile)">
-            <button ng-click = "$ctrl.updateImg('cat')" type="button">Cat</button>
-            <button ng-click = "$ctrl.updateImg('dog')" type="button">Dog</button>
-            <button ng-click = "$ctrl.updateImg('fish')" type="button">Fish</button>
-            <button ng-click = "$ctrl.updateImg('hamster')" type="button">Hamster</button>
-            <p class="label">Name</p>
-            <input ng-model="$ctrl.profile.name" value="{{ $ctrl.profile.name }}" type="text">
-            <p class="label">Contact</p>
-            <input ng-model="$ctrl.profile.contact" value="{{ $ctrl.profile.contact }}" type="text">
-            <p class="label">Bio</p>
-            <input ng-model="$ctrl.profile.bio" value="{{ $ctrl.profile.bio }}" type="text">
-            <button>Update</button>
+            <div id="selectAvi">
+                <button class="aviOption" ng-click = "$ctrl.updateImg('cat')" type="button">
+                    <img class="aviImg" src="/app/Assets/cat.png" alt="">
+                </button>
+                <button class="aviOption" ng-click = "$ctrl.updateImg('dog')" type="button">
+                        <img class="aviImg" src="/app/Assets/dog.png" alt="">
+                </button>
+                <button class="aviOption" ng-click = "$ctrl.updateImg('fish')" type="button">
+                        <img class="aviImg" src="/app/Assets/fish.png" alt="">
+                </button>
+                <button class="aviOption" ng-click = "$ctrl.updateImg('hamster')" type="button">
+                        <img class="aviImg" src="/app/Assets/hamster.png" alt="">
+                </button>
+            </div>
+            <div id="input">
+                <p class="label">Name</p>
+                <input ng-model="$ctrl.profile.name" value="{{ $ctrl.profile.name }}" type="text">
+                <p class="label">Contact</p>
+                <input ng-model="$ctrl.profile.contact" value="{{ $ctrl.profile.contact }}" type="text">
+                <p class="label">Bio</p>
+                <textarea ng-model="$ctrl.profile.bio" value="{{ $ctrl.profile.bio }}" cols="30" rows="10"></textarea>
+                <button>Update</button>
+            </div>
         </form>
     </div>
 </main>
